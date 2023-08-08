@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded',function(){
 
         //creating elements
         const value=addForm.querySelector('input[type="text"]').value;
-        const li=document.createElement('li');
+        if(value!="")
+        {
+            const li=document.createElement('li');
         const movieName=document.createElement('span');
         const deleteBtn=document.createElement('span');        
         
@@ -32,6 +34,10 @@ document.addEventListener('DOMContentLoaded',function(){
         //append to DOM
         li.appendChild(movieName);
         li.appendChild(deleteBtn);
-        list.appendChild(li); //list=u;
+        list.appendChild(li); //list=u;            
+        }
+        else{
+            alert("Please enter the movie name");
+        }
     });
 });
